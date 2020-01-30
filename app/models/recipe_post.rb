@@ -1,5 +1,4 @@
 class RecipePost < ApplicationRecord
-    validates :name, :ingredients, :instructions, :url, presence: true
-    validates :name, uniqueness: true
+    validates :name, :ingredients, :instructions, :url, :cookTime, :servingSize, presence: true
     belongs_to :user, optional: true
 end
