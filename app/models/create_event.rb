@@ -1,0 +1,2 @@
+class CreateEvent < ApplicationRecord
+end
