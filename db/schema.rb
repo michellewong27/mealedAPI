@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_31_194901) do
+ActiveRecord::Schema.define(version: 2020_02_04_191944) do
+
+  create_table "create_events", force: :cascade do |t|
+    t.string "title"
+    t.boolean "allDay"
+    t.string "start"
+    t.string "end"
+    t.integer "postId"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.boolean "allDay"
+    t.string "start"
+    t.string "end"
+    t.integer "postId"
+  end
 
   create_table "favorites", force: :cascade do |t|
     t.integer "userId"

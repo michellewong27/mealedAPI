@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :create_events
   resources :favorites 
   resources :recipe_posts 
   resources :users
